@@ -12,10 +12,11 @@ toc::[]
 
 == Overview
 
-Nuage VSP integrates with the {product-title} Platform as a Service (PaaS) to provide networking and security policies for
-Pods. Nuage integration provides an overlay networking solution driven by the VSP platform.
-The following figure shows various components involved in integrating Nuage VSP with {product-title}. There are two
-specific components responsible for the integration.
+Nuage Networks (www.nuagenetworks.net) provides a highly scalable policy-based SDN platform called Virtualized Services Platform (VSP). Nuage VSP uses the open source Open vSwitch for the data plane along with a feature rich SDN Controller.
+
+The Nuage platform uses overlays to provide seamless policy-based networking between {product-title} and other environments consisting of VMs and bare metal servers. VSP's policy abstraction model makes it easy to declare fine-grained policies for applications.The platform’s real-time analytics engine enables visibility and security monitoring for OpenShift applications.
+
+Nuage VSP integrates with {product-title} to allows business applications to be quickly turned up and updated by removing the network lag faced by DevOps teams. The following figure shows various components involved in integrating Nuage VSP with {product-title}. There are two specific components responsible for the integration.
 
 . The nuage-openshift-monitor which runs as a separate service on the {product-title} master node.
 . The vsp-openshift plugin which is invoked by the {product-title} runtime on each of the nodes of the cluster.
@@ -23,8 +24,7 @@ specific components responsible for the integration.
 .Nuage VSP Integration with {product-title}
 image::nuagesdn_integration.png[Nuage VSP Integration with {product-title}]
 
-Nuage VRS software also runs on the hypervisor of each node and gets policy configuration from the controller as it
-does in the standard VSP model.
+Nuage VRS software also runs on the hypervisor of each node and gets policy configuration from the controller.
 
 == Mapping of Constructs
 
@@ -42,7 +42,7 @@ A pod getting spawned in  {product-title} translates to a virtual port getting c
 
 == Overview of {product-title} workflows
 
-Integrating VSP with the {product-title} PaaS application workflow allows business applications to be quickly turned up and updated by removing the network lag faced by DevOps teams. VSP supports different workflows with {product-title} in order to accommodate scenarios where users can choose ease-of-use or complete control using policy-based automation.
+Integrating VSP with the {product-title} application workflow allows business applications to be quickly turned up and updated by removing the network lag faced by DevOps teams. VSP supports different workflows with {product-title} in order to accommodate scenarios where users can choose ease-of-use or complete control using policy-based automation.
 
 [[developer-workflow]]
 
